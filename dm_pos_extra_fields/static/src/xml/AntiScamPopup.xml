@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<odoo>
+    <data>
+        <template id="SecurityAlertPopup" inherit_id="AbstractAwaitablePopup">
+            <div class="popup-content">
+                <h2>¡Atención! Evita caer en estafas</h2>
+                <p>Recuerda que <strong>nadie</strong> te puede pedir información personal o financiera de manera urgente o sin una razón clara. Ten siempre en cuenta lo siguiente:</p>
+                <ul>
+                    <li><strong>No compartas nunca datos del propietario</strong>: No reveles números de cuenta, contraseñas o información sensible de personas o empresas.</li>
+                    <li><strong>Verifica siempre las fuentes</strong>: Si recibes un mensaje sospechoso, asegúrate de que la solicitud provenga de una fuente confiable. Verifica por otros medios si es necesario.</li>
+                    <li><strong>Cuidado con las ofertas demasiado buenas</strong>: Si algo suena demasiado bueno para ser cierto, probablemente lo sea.</li>
+                    <li><strong>Desconfía de solicitudes urgentes</strong>: Las estafas suelen generar un sentido de urgencia.</li>
+                    <li><strong>Nunca pagues sin confirmar</strong>: Si te piden dinero, detente y consulta antes con alguien de confianza.</li>
+                </ul>
+                <p>Recuerda, <strong>tu seguridad y privacidad son lo más importante</strong>.</p>
+                <button class="popup-button" t-on-click="_handleConfirm">Entendido</button>
+            </div>
+        </template>
+    </data>
+</odoo>
+<odoo>
+    <templates id="template" xml:space="preserve">
+         Esto asegura que la plantilla del popup se cargue 
+        <t t-name="dm_pos_extra_fields.CustomPopupTemplate">
+            <div>
+                 Si necesitas personalización adicional, añádela aquí
+            </div>
+        </t>
+    </templates>
+</odoo>-->
+
+
+<template id="template" xml:space="preserve">
+    <t t-name="AntiScamPopup" owl="1">
+        <div class="popup popup-textinput">
+                <div class="modal-header btn-lg btn-primary">
+            <h4 class="modal-title text-white text-center" ><t t-esc="tituloScam"/></h4>
+                </div>
+            <!--<div class="modal-body popup-textarea-wrap">
+                <span style="color:#811331"><t t-esc="props.body"/></span>
+                <br/>
+                <ul>
+                    <li><strong>No compartas nunca datos del propietario</strong>: No reveles números de cuenta, contraseñas o información sensible de personas o empresas.</li>
+                    <li><strong>Verifica siempre las fuentes</strong>: Si recibes un mensaje sospechoso, asegúrate de que la solicitud provenga de una fuente confiable. Verifica por otros medios si es necesario.</li>
+                    <li><strong>Desconfía de solicitudes urgentes</strong>: Las estafas suelen generar un sentido de urgencia.</li>
+                    <li><strong>Nunca pagues sin confirmar</strong>: Si te piden dinero, detente y consulta antes con alguien de confianza.</li>
+                </ul>
+                <p>Recuerda, <strong>tu seguridad y privacidad son lo más importante</strong>.</p> 
+            </div>-->
+            <div class="modal-body popup-textarea-wrap">
+                <span style="color:#811331"><t t-esc="props.body"/></span>
+                <br/>
+                <div>
+                    <t t-esc="textoScam"/>
+                </div>
+            </div>
+
+            <div class="footer footer-flex modal-footer">
+                <div class="button confirmbtn btn btn-lg btn-primary" t-on-click="acceptAction">
+                      Aceptar
+                </div>
+            </div>
+        </div>
+    </t>
+ </template>

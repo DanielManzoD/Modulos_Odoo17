@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Reemplazar todo el contenido del pos-receipt -->
+<templates id="template" xml:space="preserve">
+    <t t-name="point_of_sale.OrderReceipt" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension">
+        
+        <xpath expr="//div[contains(@class, 'pos-receipt')]" position="replace">
+                 <t t-call="CustomScamTemplate"/>
+                       
+        </xpath>
+    </t>
+</templates>

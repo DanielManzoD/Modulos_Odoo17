@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template" xml:space="preserve">
+    <t t-name="RestrictStockPopup" owl="1">
+        <div class="popup popup-textinput">
+                <div class="modal-header btn-lg btn-primary">
+            <h4 class="modal-title text-white text-center" >Producto sin existencias.</h4>
+                </div>
+            <div class="modal-body popup-textarea-wrap">
+                <span style="color:#811331"><t t-esc="props.body"/></span>
+                <br/>
+                Presiona "Ignorar y agregar" si quieres agregarlo a la orden. 
+            </div>
+            <div class="footer footer-flex modal-footer">
+                <div class="button cancel btn btn-lg btn-primary text-danger"
+                     t-on-click="cancel">
+                      Cancelar
+                </div>
+                <div class="button confirmbtn btn btn-lg btn-primary" t-on-click="_OrderProduct">
+                      Ignorar y Agregar
+                </div>
+            </div>
+        </div>
+    </t>
+        </template>
